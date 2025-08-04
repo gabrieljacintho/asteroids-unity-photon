@@ -1,3 +1,3 @@
-# Pixel GUN 3D Clone
+# Crazy Guys
 
-Pixel Gun 3D game clone (multiplayer FPS game) developed for study with Unity Engine, C# and Photon.
+Crazy Guys is a free-to-play multiplayer party royale game developed for Photon Engine study with Unity Engine, C# and Photon Engine.
