@@ -4,7 +4,8 @@ using UnityEngine.Scripting;
 namespace Quantum.Asteroids
 {
     [Preserve]
-    public unsafe class AsteroidsProjectileSystem : SystemMainThreadFilter<AsteroidsProjectileSystem.Filter>, ISignalAsteroidsShipShoot
+    public unsafe class AsteroidsProjectileSystem : SystemMainThreadFilter<AsteroidsProjectileSystem.Filter>, ISignalAsteroidsShipShoot,
+        ISignalOnCollisionProjectileHitShip, ISignalOnCollisionProjectileHitAsteroid
     {
         public struct Filter
         {
@@ -37,6 +38,29 @@ namespace Quantum.Asteroids
 
             PhysicsBody2D* body = frame.Unsafe.GetPointer<PhysicsBody2D>(projectileEntity);
             body->Velocity = ownerTransform->Up * config.ProjectileInitialSpeed;
+        }
+
+        public void OnCollisionProjectileHitShip(Frame frame, CollisionInfo2D info, AsteroidsProjectile* projectile, AsteroidsShip* ship)
+        {
+            if (projectile->Owner == info.Other)
+            {
+                info.IgnoreCollision = true;
+                return;
+            }
+
+            frame.Destroy(info.Entity);
+        }
+
+        public void OnCollisionProjectileHitAsteroid(Frame frame, CollisionInfo2D info, AsteroidsProjectile* projectile, AsteroidsAsteroid* asteroid)
+        {
+            if (asteroid->ChildAsteroid != null)
+            {
+                frame.Signals.SpawnAsteroid(asteroid->ChildAsteroid, info.Other);
+                frame.Signals.SpawnAsteroid(asteroid->ChildAsteroid, info.Other);
+            }
+
+            frame.Destroy(info.Entity);
+            frame.Destroy(info.Other);
         }
     }
 }
