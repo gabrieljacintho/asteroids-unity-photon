@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0336b61f68cf3194d8d49eea41648590
+    m_Address: Assets/QuantumAssets/AsteroidsMenuConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 101ced7d297b30244a25a9342fc55c3a
     m_Address: Assets/Prefabs/AsteroidsShipEntityPrototype.qprototype
     m_ReadOnly: 0
