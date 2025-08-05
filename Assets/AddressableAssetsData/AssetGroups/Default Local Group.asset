@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79d2a49ebd541054ebd25d3dce562280
+    m_Address: Assets/QuantumAssets/AsteroidsGameConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b0ebed4ad8d37254d8d99e527f4739af
     m_Address: Assets/Prefabs/AsteroidLargeEntityPrototype.qprototype
     m_ReadOnly: 0
