@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: c45f23d96731cb74697e8e193ee0080e
+  m_SerializeEntries:
+  - m_GUID: 010e4004818045540a72595b1c1f7acd
+    m_Address: Assets/Database/AsteroidsSimulationConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 101ced7d297b30244a25a9342fc55c3a
+    m_Address: Assets/Prefabs/AsteroidsShipEntityPrototype.qprototype
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11e438a458cb6184cb5ba42dd6d71d4a
+    m_Address: Assets/Database/AsteroidsMap.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 342fa948b5dc9cd48b5f187553b0a2ae
+    m_Address: Assets/Prefabs/AsteroidLarge.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0ebed4ad8d37254d8d99e527f4739af
+    m_Address: Assets/Prefabs/AsteroidLargeEntityPrototype.qprototype
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5df8755d1a5e104484d1f18d033879b
+    m_Address: Assets/Database/AsteroidsSystemConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3307b8021d486145b29fcbba3d88156
+    m_Address: Assets/Prefabs/AsteroidsShip.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 8a5546c0e2e63ee408529959a46b8572, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6017845d19ffb6a41b62f4b2e3a1dfc3, type: 2}
+    - {fileID: 11400000, guid: c064e4abdcc55844c9a8576590be0b8c, type: 2}
