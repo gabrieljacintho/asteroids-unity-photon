@@ -28,3 +28,8 @@ MonoBehaviour:
   AsteroidSpawnDistanceToCenter:
     RawValue: 1310720
   InitialAsteroidsCount: 5
+  GameMapSize:
+    X:
+      RawValue: 4587520
+    Y:
+      RawValue: 2621440
