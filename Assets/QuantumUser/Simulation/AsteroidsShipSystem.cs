@@ -23,12 +23,14 @@ namespace Quantum.Asteroids
             }
 
             UpdateShipMovement(frame, ref filter, input);
+            UpdateShipFire(frame, ref filter, input);
         }
 
         private void UpdateShipMovement(Frame frame, ref Filter filter, Input* input)
         {
-            FP shipAcceleration = 7;
-            FP turnSpeed = 8;
+            var config = frame.FindAsset(filter.AsteroidsShip->ShipConfig);
+            FP shipAcceleration = config.ShipAceleration;
+            FP turnSpeed = config.ShipTurnSpeed;
 
             if (input->Up)
             {
@@ -46,6 +48,23 @@ namespace Quantum.Asteroids
             }
 
             filter.Body->AngularVelocity = FPMath.Clamp(filter.Body->AngularVelocity, -turnSpeed, turnSpeed);
+        }
+
+        private void UpdateShipFire(Frame frame, ref Filter filter, Input* input)
+        {
+            var config = frame.FindAsset(filter.AsteroidsShip->ShipConfig);
+
+            if (input->Fire && filter.AsteroidsShip->FireInterval <= 0)
+            {
+                filter.AsteroidsShip->FireInterval = config.FireInterval;
+                var relativeOffset = FPVector2.Up * config.ShotOffset;
+                var spawnPosition = filter.Transform->TransformPoint(relativeOffset);
+                frame.Signals.AsteroidsShipShoot(filter.Entity, spawnPosition, config.ProjectilePrototype);
+            }
+            else
+            {
+                filter.AsteroidsShip->FireInterval -= frame.DeltaTime;
+            }
         }
     }
 }

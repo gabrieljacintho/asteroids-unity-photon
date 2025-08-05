@@ -40,6 +40,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ecd01a9a948e8d4097d006c314dd51b
+    m_Address: Assets/QuantumAssets/DefaultAsteroidsProjectileConfig.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 79d2a49ebd541054ebd25d3dce562280
     m_Address: Assets/QuantumAssets/AsteroidsGameConfig.asset
     m_ReadOnly: 0
@@ -57,6 +62,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c3307b8021d486145b29fcbba3d88156
     m_Address: Assets/Prefabs/AsteroidsShip.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d3e89628c79f9cc47824105f6e34f56e
+    m_Address: Assets/Prefabs/AsteroidsProjectile.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd4d58530d4ccbe4daa30d5998a18ccd
+    m_Address: Assets/Prefabs/AsteroidsProjectileEntityPrototype.qprototype
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
